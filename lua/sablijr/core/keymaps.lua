@@ -16,6 +16,8 @@ keymap.set("n", "<leader>w", ":w<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "Q", ":m-2<CR>") -- Moving line up
+keymap.set("n", "Z", ":m+<CR>", { silent = true }) -- Moving line down
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -57,6 +59,6 @@ keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git 
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits leaderr current file/buffer (use <cr> to checkout) ["gfc" leaderr git file commits]
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" leaderr git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" leaderr git status]
-
--- restart lsp server (not on youtube nvim video)
+--
+-- restart lsp server (not on youtube nvim video
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
